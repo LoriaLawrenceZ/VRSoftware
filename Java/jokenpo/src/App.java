@@ -11,6 +11,10 @@ public class App {
             System.out.println("------------------JOKENPO------------------");
             System.out.println("[1] - Pedra | [2] - Papel | [3] - Tesoura");
             escolhaPlayer = sc.next();
+            while (!escolhaPlayer.equals("1") & escolhaPlayer.equals("2") & escolhaPlayer.equals("3")) {
+                System.out.println("[1] - Pedra | [2] - Papel | [3] - Tesoura");
+                escolhaPlayer = sc.next();
+            }
 
             Jokenpo.Jogando(escolhaPlayer);
 
