@@ -14,6 +14,8 @@ public class App {
 
             Jokenpo.Jogando(escolhaPlayer);
 
+            System.out.println("------------------\nDeseja jogar novamente?\n[S] - Sim | [N] - Não");
+            jogarNovamente = sc.next();
         } while (jogarNovamente.equalsIgnoreCase("S"));
     }
 }

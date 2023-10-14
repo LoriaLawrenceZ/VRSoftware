@@ -17,14 +17,14 @@ public class Jokenpo {
             escolhaBot = "Tesoura";
         }
 
-        if(escolhaPlayer == "1"){
-            System.out.printf("Jogador escolheu Pedra | Bot escolheu %s", escolhaBot);
+        if(escolhaPlayer.equals("1")){
+            System.out.printf("Jogador escolheu Pedra | Bot escolheu %s\n", escolhaBot);
         }
-        else if(escolhaPlayer == "2"){
-            System.out.printf("Jogador escolheu Papel | Bot escolheu %s", escolhaBot);
+        else if(escolhaPlayer.equals("2")){
+            System.out.printf("Jogador escolheu Papel | Bot escolheu %s\n", escolhaBot);
         }
         else{
-            System.out.printf("Jogador escolheu Tesoura | Bot escolheu %s", escolhaBot);
+            System.out.printf("Jogador escolheu Tesoura | Bot escolheu %s\n", escolhaBot);
         }
 
         //Empate
