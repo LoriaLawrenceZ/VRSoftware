@@ -1,0 +1,72 @@
+Fazer um relatório como proposta comercial (isto, só que como texto corrido)(linguagem informal)
+
+----------===Regra de Negócio Biblioteca===----------
+mysql
+-----===Requisitos Funcionais===-----
+universidade
+
+contagem dos dias, são corridos, se o ultimo dia cair em dia não util, conta o próximo dia util sem multa
+
+caso de devolução não precisa ser a mesma pessoa, só apresentar ra (caso de doença etc)
+
+autorização de gerenciamento do sistema
+Reitoria (adm)
+Funcionarios (aluno + emprestimos, recebimento de multa, cancelamento de lista de espera)
+nivel de usuario de aluno (incluir reserva, consultar acervo, cancelar própria reserva)
+
+não tem venda de livros
+
+reitor - ra, nome, telefone e setor, cpf
+
+60 dias inativo depois de atingir o limite (5 livros devendo)
+zewra a contagem senmpre que devolver
+
+30.000 alunos
+alguns ativos, outros não
+circusntacia pra ser inativo - faculdade fez um pedido de expulsão pro aluno; atraso de mais de 5 livros; passou dos 30 dias de pagamento do limite
+
+Se o aluno acabar a faculdade, pode utilizar enquanto a carteirinha tiver validade (data de validade da carteirinha)
+
+Se não tiver titulo, pode pedir compra
+
+quem não é aluno não pode pedir livro (ra de visitante)
+
+Nem todos os livros podem ser emprestados, alguns são só pra consulta
+
+Biblioteca aceita doações
+
+acervo de mais de 150 mil livros (exemplares)
+código único do livro(código de barras); titulo do livro; autor do livro; ISSBN (número unico do livro), setor (matematica, ficção, auto-ajuda etc); numero de tombo (numero padrão da biblioteca); mapeamento; se pode ou não ser emprestado, pode ter livro com mesmo autor, mesmo nome;
+período de emprestimo (15 dias)
+Apenas dinheiro ou pix
+
+Relátorios:
+de empréstimo; lista de espera; disponibilidade; registro pagamento de multas (relatorio por atraso, quem tem muito atraso, quem tem pouco); livros mais reservados; relatorio de reserva (dados do aluno, datas etc);
+
+nenhum dado pode ser excluído
+
+Biblioteca abre 6:00
+Renovação pode ser Online (permitida até 16:00 )
+23:00 fechamento da biblioteca
+
+Não tem limite de renovação desde que não tenha lista de espera
+
+Furto, perda ou roubo do livro, aluno paga o valor de mercado do livro; (prazo de pagamento 30 dias)
+
+Renovação de empréstimo - sim, desde que não haja lista de espera
+
+seja cobrado uma multa caso haja atraso na devolução (multa por dia de atraso), multa inicial de 5 reais, com aumento de 5% ao dia (50 centavos); multa por livro
+
+valide se a carteira do usuario no cadastro do aluna tá valido ou não
+
+pra novos alunos, ser possível realizar o cadastro
+cadastro - ra do aluno; nome do aluno; curso do aluno; endereço do aluno; telefone do aluno; email do aluno; cpf; validade da carteirinha
+
+tratamento de dados, limite de caracteres e cpf valido
+
+Pirmeiro mes de cadastro (1 aluno, 1 livro)
+se devolver dentro do prazo, até 3 livros por aluno a partir do segundo mes
+não tem restrição de materia
+
+-----===Requisito não funcional===-----
+só pode emprestimo se o status do aluno for ativo
