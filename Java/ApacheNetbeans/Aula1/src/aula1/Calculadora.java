@@ -17,7 +17,7 @@ public class Calculadora {
     double num2;
     double calculo;
     // Histórico de números
-    ArrayList<String> numeros = new ArrayList<String>();
+    ArrayList<String> historico = new ArrayList<String>();
 
     public Calculadora(Scanner sc) {
         this.sc = sc;
@@ -70,32 +70,28 @@ public class Calculadora {
 
     public void soma(double num1, double num2) {
         calculo = num1 + num2;
-        numeros.add("Resultado: "+ calculo);
+        historico.add(num1 +" + "+ num2 +" = "+ calculo);
         System.out.println("Soma: " + num1 + " + " + num2 + " = " + calculo);
     }
 
     public void subtracao(double num1, double num2) {
         calculo = num1 - num2;
-        numeros.add("Resultado: "+ calculo);
+        historico.add(num1 +" - "+ num2 +" = "+ calculo);
         System.out.println("Subtração: " + num1 + " - " + num2 + " = " + calculo);
     }
 
     public void multiplicacao(double  num1, double num2) {
         calculo = num1 * num2;
-        numeros.add("Resultado: "+ calculo);
+        historico.add(num1 +" * "+ num2 +" = "+ calculo);
         System.out.println("Multiplicação: " + num1 + " * " + num2 + " = " + calculo);
     }
 
     public void divisao(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("Não é possível Dividir por 0.\nTente novamente com digitos válidos");
-            // Removendo os dois ultimos numeros do historico
-            for (int i = 0; i < 2; i++) {
-                numeros.remove(numeros.size() - 1);
-            }
         } else {
             calculo = num1 / num2;
-            numeros.add("Resultado: "+ calculo);
+            historico.add(num1 +" / "+ num2 +" = "+ calculo);
             System.out.println("Divisão: " + num1 + " / " + num2 + " = " + calculo);
         }
     }
@@ -104,20 +100,17 @@ public class Calculadora {
         System.out.println("Insira um primeiro número para o cálculo:");
         num1 = sc.nextDouble();
 
-        // Adicionando número ao histórico de números
-        numeros.add("Número 1: "+ num1);
-
         System.out.println("Insira um segundo número para o cálculo:");
         num2 = sc.nextDouble();
-
-        // Adicionando número ao histórico de números
-        numeros.add("Número 2: "+ num2);
     }
 
     public void listarHistorico(){
+        int contador = 1;
         System.out.println("--------------------------------------------------\nHistórico:");
-        for (int i = 0; i < numeros.size(); i++) {
-            System.out.println(numeros.get(i));
+        for (int i = 0; i < historico.size(); i++) {
+            System.out.println("Cálculo "+ contador +":");
+            System.out.println(historico.get(i));
+            contador++;
         }
     }
 }
