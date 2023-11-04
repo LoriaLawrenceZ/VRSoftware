@@ -43,16 +43,20 @@ public class Calculadora {
                     continuar = false;
                     break;
                 case "1":
-                    soma();
+                    pedirNumero();
+                    soma(num1, num2);
                     break;
                 case "2":
-                    subtracao();
+                    pedirNumero();
+                    subtracao(num1, num2);
                     break;
                 case "3":
-                    multiplicacao();
+                    pedirNumero();
+                    multiplicacao(num1, num2);
                     break;
                 case "4":
-                    divisao();
+                    pedirNumero();
+                    divisao(num1, num2);
                     break;
                 default:
                     break;
@@ -60,43 +64,30 @@ public class Calculadora {
         } while (continuar);
     }
 
-    public void soma() {
-        System.out.println("Insira um primeiro número para o cálculo:");
-        num1 = sc.nextInt();
-        System.out.println("Insira um segundo número para o cálculo:");
-        num2 = sc.nextInt();
-
+    public void soma(double num1, double num2) {
         System.out.println("Soma: " + num1 + " + " + num2 + " = " + (num1 + num2));
     }
 
-    public void subtracao() {
-        System.out.println("Insira um primeiro número para o cálculo:");
-        num1 = sc.nextInt();
-        System.out.println("Insira um segundo número para o cálculo:");
-        num2 = sc.nextInt();
-
+    public void subtracao(double num1, double num2) {
         System.out.println("Subtração: " + num1 + " - " + num2 + " = " + (num1 - num2));
     }
 
-    public void multiplicacao() {
-        System.out.println("Insira um primeiro número para o cálculo:");
-        num1 = sc.nextInt();
-        System.out.println("Insira um segundo número para o cálculo:");
-        num2 = sc.nextInt();
-
+    public void multiplicacao(double  num1, double num2) {
         System.out.println("Multiplicação: " + num1 + " * " + num2 + " = " + (num1 * num2));
     }
 
-    public void divisao() {
-        System.out.println("Insira um primeiro número para o cálculo:");
-        num1 = sc.nextInt();
-        System.out.println("Insira um segundo número para o cálculo:");
-        num2 = sc.nextInt();
-
+    public void divisao(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("Não é possível Dividir por 0.\nTente novamente com digitos válidos");
         } else {
             System.out.println("Divisão: " + num1 + " / " + num2 + " = " + (num1 / num2));
         }
+    }
+    
+    public void pedirNumero(){
+        System.out.println("Insira um primeiro número para o cálculo:");
+        num1 = sc.nextInt();
+        System.out.println("Insira um segundo número para o cálculo:");
+        num2 = sc.nextInt();
     }
 }
