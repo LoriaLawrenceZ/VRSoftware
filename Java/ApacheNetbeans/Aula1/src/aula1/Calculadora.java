@@ -28,16 +28,6 @@ public class Calculadora {
                     + " | [3] - Multiplicação | [4] - Divisão | [0] - Sair");
             opcaoMenu = sc.next();
 
-            while (!opcaoMenu.equals("0") && !opcaoMenu.equals("1")
-                    && !opcaoMenu.equals("2") && !opcaoMenu.equals("3")
-                    && !opcaoMenu.equals("4")) {
-                System.out.println("Insira uma opção válida!"
-                        + "\n[1] - Soma | [2] - Subtração"
-                        + " | [3] - Multiplicação | [4] - Divisão"
-                        + " | [0] - Sair");
-                opcaoMenu = sc.next();
-            }
-
             switch (opcaoMenu) {
                 case "0":
                     continuar = false;
@@ -59,6 +49,7 @@ public class Calculadora {
                     divisao(num1, num2);
                     break;
                 default:
+                    System.out.println("Insira uma opção válida!");
                     break;
             }
         } while (continuar);
