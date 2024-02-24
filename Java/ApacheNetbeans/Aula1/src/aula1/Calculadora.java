@@ -77,8 +77,8 @@ public class Calculadora {
     
     public void pedirNumero(){
         System.out.println("Insira um primeiro número para o cálculo:");
-        num1 = sc.nextInt();
+        num1 = sc.nextDouble();
         System.out.println("Insira um segundo número para o cálculo:");
-        num2 = sc.nextInt();
+        num2 = sc.nextDouble();
     }
 }
